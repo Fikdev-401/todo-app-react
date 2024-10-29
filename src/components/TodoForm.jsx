@@ -9,7 +9,7 @@ function TodoForm({ addTodo }) {
         event.preventDefault();
         if (task.trim()) {
             addTodo(task);
-            setTask(''); // Clear input field
+            setTask(''); 
         }
     };
 
