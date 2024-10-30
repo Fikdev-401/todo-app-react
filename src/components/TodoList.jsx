@@ -27,7 +27,15 @@ function TodoList({ todos, deleteHandler, updateTodo }) {
                             </span>
                         </td>
                         <td>
-                            <button className="btn btn-success me-2" onClick={() => updateTodo(item.id)}>Edit</button>
+                            {item.status ?
+                                <button className="btn btn-primary me-2" onClick={() => updateTodo(item.id)}>
+                                    <span>Yeayy! selesai</span>
+                                </button> :
+
+                                <button className="btn btn-warning text-white me-2" onClick={() => updateTodo(item.id)}>
+                                    <span>Belum selesai :(</span>
+                                </button>
+                            }
                             <button className="btn btn-danger" onClick={() => deleteHandler(item.id)}>Delete</button>
                         </td>
                     </tr>
